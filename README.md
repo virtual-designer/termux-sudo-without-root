@@ -10,9 +10,13 @@ __Support My Work By Starring This Repository on Github.__
   ```
     apt update && apt upgrade  
     apt install git
-  ```
+  ```  
+
     After That, Run  
-  ```
+
+
+  ```  
+
     git clone http://github.com/virtual-designer/termux-sudo-without-root  
     cd termux-sudo-without-root/  
     ./install.exec
