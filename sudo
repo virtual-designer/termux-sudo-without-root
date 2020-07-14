@@ -1,0 +1,82 @@
+#!/bin/bash
+
+home_var='/data/data/com.termux/files/'
+
+show_help(){
+  echo -e "\e[1mVirtual Designer Sudo Script "$(cat ${home_var}'usr/etc/sudoers.d/version.yml')"\e[0m"
+  echo -e "   sudo [options] <command>\n"
+  echo -e "  Currantly Supported Options:\n"
+  echo -e "         sudo -h | --help: Show this help and exit"
+  echo -e "         sudo -v | --version: Show the currant version of sudo"
+#  echo -e "         sudo -u | --update: Check & Install Updates of Sudo"
+#  echo -e "         sudo -r | --remove: Uninstall Sudo"
+  exit;
+}
+
+   cat_pass=$(cat ${home_var}'usr/etc/sudoers' | grep -w ${USER} | head -n1)
+   if [[ $cat_pass == '' ]];
+   then
+	echo -e "The user '"${USER}"' is not in sudoers group."
+	exit 2
+fi
+
+PASSWD=${cat_pass}
+
+if [[ $1 != '' ]] && [[ $1 != "-"* ]];
+then
+  echo -en '[sudo] password for '${USER}': '
+  read -s password
+  echo -e ''
+  processed_data=${USER}'|All|'${password}
+  if [[ $processed_data == $PASSWD ]];
+  then
+    check_config=$(cat ${home_var}'usr/etc/sudoers.d/config.yml')
+    if [[ $check_config == "exec_as_root: false" ]];
+    then
+      command $@
+    else
+      command su -c $@
+    fi
+  else
+    echo -e '\nSorry, password does not match. Please try again.'
+    exit 2
+   fi
+else
+   
+      if [[ $1 == "--"* ]];
+      then
+        case $1 in
+         "--help" )
+           show_help;
+         ;;
+        "--version" )
+            echo -e $(cat ${home_var}'usr/etc/sudoers.d/version.yml')" (Apache Software License)"
+            exit;
+        ;;
+        
+         * )
+           show_help;
+         ;;
+        esac
+      fi 
+   if [[ $1 == "-"* ]];
+   then
+      case $1 in
+      "-h" )
+        show_help;
+      ;;
+      
+      "-v" )
+        echo -e $(cat ${home_var}'usr/etc/sudoers.d/version.yml')" (Apache Software License)"
+        exit
+      ;;
+      
+       * )
+        show_help;
+       ;;
+      esac
+      
+    else
+     show_help;
+   fi
+fi

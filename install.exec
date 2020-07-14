@@ -1,0 +1,19 @@
+#!/bin/bash
+
+home_var='/data/data/com.termux/files/'
+
+{
+cp -R sudoers.d/ ${home_var}"usr/etc/" &&
+cp sudoers ${home_var}"usr/etc/sudoers" && 
+cp sudo ${home_var}"usr/bin/sudo" && 
+chmod 755 ${home_var}"usr/bin/sudo" &&
+echo -e "\e[1;32m[+]\e[0m Successfully installed sudo! Run 'sudo' on your terminal."
+} || {
+  echo -e "E: Error while installing sudo."
+  exit 2
+}
+
+
+
+
+

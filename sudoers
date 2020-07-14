@@ -1,0 +1,6 @@
+# Put your sudoers configuration here
+
+# structure: username|permissions|password
+# example: mike|All|admin
+
+root|All|admin
