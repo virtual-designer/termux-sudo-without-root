@@ -58,7 +58,10 @@ __Support My Work By Starring This Repository on Github.__
   
   <br>
   <br>
-  **Commands are not Running as Root (This topic is only for the root users)**
+
+
+  **Commands are not Running as Root (This topic is only for the root users)**  
+
   
   Then you may face a problem that the commands are not running as root!  
   Don't fare!  
