@@ -30,7 +30,9 @@ __Support My Work By Starring This Repository on Github.__
   **By default, sudo will allow only root user to execute commands with it.**  
   But You add your own users.  
 
+
 	**By Default, Password for root is __admin__**  
+
 
   Run  
   ```
