@@ -2,6 +2,47 @@
 
 home_var='/data/data/com.termux/files/'
 
+install_pkg(){
+  echo "Install Packages..."
+  apt install git wget > /dev/null 2>&1 || {
+    echo "E: Couldn't install Packages."
+    exit 2
+  }
+  exit
+}
+
+echo "Starting..."
+echo "Checking requirements..."
+
+command -v git > /dev/null 2>&1 || {
+  echo -en "Requirements are currectly not installed. Do you want to install it?[Y/n] "
+  read choice2
+  if [[ $choice2 == "Y" ]] || [[ $choice2 == "y" ]];
+  then
+    install_pkg
+  else
+    echo "Aborted."
+    exit 2
+  fi
+  exit
+}
+
+command -v wget > /dev/null 2>&1 || {
+  echo -en "Requirements are currectly not installed. Do you want to install it?[Y/n] "
+  read choice2
+  if [[ $choice2 == "Y" ]] || [[ $choice2 == "y" ]];
+  then
+    install_pkg
+  else
+    echo "Aborted."
+    exit 2
+  fi
+  exit
+}
+
+echo "..OK"
+echo "Installing sudo v"$(cat sudoers.d/version.yml)" ..."
+
 {
 cp -R sudoers.d/ ${home_var}"usr/etc/" &&
 cp sudoers ${home_var}"usr/etc/sudoers" && 
@@ -9,6 +50,7 @@ cp sudo ${home_var}"usr/bin/sudo" &&
 chmod 755 ${home_var}"usr/bin/sudo" &&
 chmod 444 ${home_var}"usr/etc/sudoers" &&
 chmod 555 ${home_var}"usr/etc/sudoers.d/" &&
+chmod 555 ${home_var}"usr/etc/sudoers.d/remove.exec" &&
 echo -e "\e[1;32m[+]\e[0m Successfully installed sudo! Run 'sudo' on your terminal."
 } || {
   echo -e "E: Error while installing sudo."
