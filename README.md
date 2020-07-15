@@ -87,10 +87,12 @@ After That, Run
   
   Now it will Start to execute commands as root if you have root & you have granted it.
   
+
+
+If you saw a bug, plese report me to my Email address.  
+
+
 > Email: admin@coding-master.ml  
-
-##### If you got a bug, plese report me to my Email address.  
-
 
 *Don't forget to follow my profile!*  
 
