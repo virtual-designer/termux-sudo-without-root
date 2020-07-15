@@ -8,8 +8,8 @@ __Support My Work By Starring This Repository on Github.__
 ### Installation  
   1. First, Download My Repository As ZIP or Clone it via your terminal. So, Run  
   ```
-    apt update && apt upgrade  
-    apt install git
+    $ apt update && apt upgrade  
+    $ apt install git
   ```  
 
     After That, Run  
@@ -17,9 +17,9 @@ __Support My Work By Starring This Repository on Github.__
 
   ```  
 
-    git clone http://github.com/virtual-designer/termux-sudo-without-root  
-    cd termux-sudo-without-root/  
-    ./install.exec
+    $ git clone http://github.com/virtual-designer/termux-sudo-without-root  
+    $ cd termux-sudo-without-root/  
+    $ ./install.exec
   ```  
 
   And voila!  
@@ -36,8 +36,8 @@ __Support My Work By Starring This Repository on Github.__
 
   Run  
   ```
-    cd /data/data/com.termux/files/usr/etc
-    nano sudoers
+    $ cd /data/data/com.termux/files/usr/etc
+    $ nano sudoers
   ```
   
   You will see a error now.  
@@ -47,7 +47,7 @@ __Support My Work By Starring This Repository on Github.__
   So, you may run  
   
   ```
-    chmod +w sudoers
+    $ chmod +w sudoers
   ```  
   
   And You can also change permissions of **sudoers.d/** directory.  
@@ -55,7 +55,7 @@ __Support My Work By Starring This Repository on Github.__
   run  
   
   ```
-    chmod 755 sudoers.d/
+    $ chmod 755 sudoers.d/
   ```  
   
   Then open the file 'sudoers' with a text editor and add your custom users.  
@@ -71,7 +71,7 @@ __Support My Work By Starring This Repository on Github.__
   Don't fare!  
   Just open that **sudoers.d/** directory and then run  
   ```
-    nano config.yml
+    $ nano config.yml
   ```  
   
   Now this will open the file 'config.yml'.  
