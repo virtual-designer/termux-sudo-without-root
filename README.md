@@ -7,12 +7,14 @@ __Support My Work By Starring This Repository on Github.__
 
 ### Installation  
   1. First, Download My Repository As ZIP or Clone it via your terminal. So, Run  
+  
   ```
     $ apt update && apt upgrade  
     $ apt install git
   ```  
 
-    After That, Run  
+    
+After That, Run  
 
 
   ```  
@@ -21,6 +23,7 @@ __Support My Work By Starring This Repository on Github.__
     $ cd termux-sudo-without-root/  
     $ ./install.exec
   ```  
+
 
   And voila!  
   You're ready use sudo!  
