@@ -31,7 +31,7 @@ __Support My Work By Starring This Repository on Github.__
   But You add your own users.  
 
 
-	**By Default, Password for root is __admin__**  
+  **By Default, Password for root is __admin__**  
 
 
   Run  
