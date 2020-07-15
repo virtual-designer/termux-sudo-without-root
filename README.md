@@ -27,9 +27,11 @@ __Support My Work By Starring This Repository on Github.__
   Just type 'sudo' on your terminal.  
   
 ### Configuring Sudo  
-  **By default, sudo will allow only root users to execute commands with it.**  
-  But You can change it.  
-  
+  **By default, sudo will allow only root user to execute commands with it.**  
+  But You add your own users.  
+
+	**By Default, Password for root is __admin__**  
+
   Run  
   ```
     cd /data/data/com.termux/files/usr/etc
