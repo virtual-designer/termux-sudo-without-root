@@ -30,7 +30,7 @@ uninstall_sudo(){
 }
 
 update_sudo(){
-          wget https://raw.githubusercontent.com/virtual-designer/termux-sudo-without-root/master/sudoers.d/version.yml
+          wget https://raw.githubusercontent.com/virtual-designer/termux-sudo-without-root/master/sudoers.d/version.yml > /dev/null 2>&1
           new_v=$(cat version.yml)
           curr_v=$(cat ${home_var}'usr/etc/sudoers.d/version.yml')
           rm version.yml
@@ -71,12 +71,23 @@ update_sudo(){
    then
 	echo -e "The user '"${USER}"' is not in sudoers group."
 	exit 2
-fi
+   fi
 
 PASSWD=${cat_pass}
 
 if [[ $1 != '' ]] && [[ $1 != "-"* ]];
 then
+  if [[ $PASSWD == 'root|All|'* ]];
+  then
+    check_config=$(cat ${home_var}'usr/etc/sudoers.d/config.yml')
+    if [[ $check_config == "exec_as_root: false" ]];
+    then
+      command $@
+    else
+      command su -c $@
+    fi
+   exit;
+  fi
   echo -en '[sudo] password for '${USER}': '
   read -s password
   echo -e ''
