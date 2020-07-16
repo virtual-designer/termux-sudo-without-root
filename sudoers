@@ -1,9 +1,0 @@
-# Put your sudoers configuration here
-
-# structure: username|permissions|password
-# example: 
-#          you|All|yourPassword
-#          someone|None|Password
-# You can keep multiple users on sudoers by dividing them with an enter.
-
-root|All|admin

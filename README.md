@@ -13,6 +13,12 @@ __Support My Work By Starring This Repository on Github.__
     $ apt install git
   ```  
 
+My Package requires git & wget, so run  
+
+  ```
+   $ apt install wget
+  ```
+
     
 After That, Run  
 
@@ -21,7 +27,7 @@ After That, Run
 
     $ git clone http://github.com/virtual-designer/termux-sudo-without-root  
     $ cd termux-sudo-without-root/  
-    $ ./install.exec
+    $ dpkg -i sudo.deb
   ```  
 
 
