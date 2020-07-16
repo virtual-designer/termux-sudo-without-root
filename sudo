@@ -52,7 +52,7 @@ update_sudo(){
             fi
           else 
             echo "You are using the latest version of sudo.";
-            rm -R termux-sudo-without-root/
+            #rm -R termux-sudo-without-root/
           fi
         exit;
 }
