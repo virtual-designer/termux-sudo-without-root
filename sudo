@@ -47,7 +47,7 @@ update_sudo(){
               bash "install.exec"
               cd ../
              else
-              rm -R termux-sudo-without-root/
+              #rm -R termux-sudo-without-root/
               echo "Aborted."
             fi
           else 
