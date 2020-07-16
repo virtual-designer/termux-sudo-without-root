@@ -30,7 +30,7 @@ uninstall_sudo(){
 }
 
 update_sudo(){
-          wget https://raw.githubusercontent.com/virtual-designer/termux-sudo-without-root/master/sudoers.d/version.yml > /dev/null 2>&1
+          command wget https://raw.githubusercontent.com/virtual-designer/termux-sudo-without-root/master/sudoers.d/version.yml > /dev/null 2>&1
           new_v=$(cat version.yml)
           curr_v=$(cat ${home_var}'usr/etc/sudoers.d/version.yml')
           rm version.yml
@@ -41,12 +41,7 @@ update_sudo(){
             echo ""
             if [[ $choice2 == "Y" ]] || [[ $choice2 == "y" ]];
             then
-              if [[ -e termux-sudo-without-root ]];
-              then
-                rm -R termux-sudo-without-root/
-              else
-                git clone http://github.com/virtual-designer/termux-sudo-without-root > /dev/null 2>&1
-              fi
+              git clone http://github.com/virtual-designer/termux-sudo-without-root > /dev/null 2>&1
               cd termux-sudo-without-root/
               bash "sudoers.d/remove.exec" > /dev/null 2>&1
               bash "install.exec"
