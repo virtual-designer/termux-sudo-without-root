@@ -34,7 +34,7 @@ After That, Run
   But You add your own users.  
 
 
-  **By Default, Password for root is __admin__**  
+  **By Default, you won't asked for password if the user is 'root'**  
 
 
   Run  
@@ -87,6 +87,12 @@ After That, Run
   
   Now it will Start to execute commands as root if you have root & you have granted it.
   
+
+For more details, Run  
+
+```
+  sudo -h
+```  
 
 
 If you saw a bug, plese report me to my Email address.  
