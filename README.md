@@ -77,7 +77,7 @@ Then add users as you wish.
 For more details, Run  
 
 ```
-  sudo -h
+  $ sudo -h
 ```  
 
 
