@@ -1,6 +1,10 @@
 # Termux Sudo Without Root  
 In this repository, I've created a Sudo Script That Provides Sudo Utilities For Termux. It can run on both rooted & **Non-rooted** devices!  
 
+### What's new in version 2.2.4?  
+> Sudo is now available as compressed debian package (.deb file)  
+> Minor bug fixes
+
 __Support My Work By Starring This Repository on Github.__  
 
 **WARNING: Sudo will run on Non-rooted devices but It doesn't provide root permissions on your device!**  
@@ -11,13 +15,7 @@ __Support My Work By Starring This Repository on Github.__
   ```
     $ apt update && apt upgrade  
     $ apt install git
-  ```  
-
-My Package requires git & wget, so run  
-
-  ```
-   $ apt install wget
-  ```
+  ``` 
 
     
 After That, Run  
@@ -27,7 +25,7 @@ After That, Run
 
     $ git clone http://github.com/virtual-designer/termux-sudo-without-root  
     $ cd termux-sudo-without-root/  
-    $ dpkg -i sudo.deb
+    $ apt install ./sudo.deb
   ```  
 
 
@@ -48,27 +46,9 @@ After That, Run
     $ cd /data/data/com.termux/files/usr/etc
     $ nano sudoers
   ```
-  
-  You will see a error now.  
-  
-  It wiil say that the file 'sudoers' has no write permission.  
-  
-  So, you may run  
-  
-  ```
-    $ chmod +w sudoers
-  ```  
-  
-  And You can also change permissions of **sudoers.d/** directory.  
-  
-  run  
-  
-  ```
-    $ chmod 755 sudoers.d/
-  ```  
-  
-  Then open the file 'sudoers' with a text editor and add your custom users.  
-  
+
+Then add users as you wish.
+
   <br>
   <br>
 
@@ -80,10 +60,10 @@ After That, Run
   Don't fare!  
   Just open that **sudoers.d/** directory and then run  
   ```
-    $ nano config.yml
+    $ nano sudo-exec.conf
   ```  
   
-  Now this will open the file 'config.yml'.  
+  Now this will open the file 'sudo-exec.conf'.  
   
   Just Edit the first line:
     ```
