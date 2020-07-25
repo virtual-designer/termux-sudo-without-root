@@ -1,6 +1,11 @@
 # Termux Sudo Without Root  
 In this repository, I've created a Sudo Script That Provides Sudo Utilities For Termux. It can run on both rooted & **Non-rooted** devices!  
 
+### What's new in version 2.3.6?  
+> Sudo is now compatible with su binary with direct execution
+> Minor bug fixes
+
+
 ### What's new in version 2.2.4?  
 > Sudo is now available as compressed debian package (.deb file)  
 > Minor bug fixes
@@ -47,7 +52,27 @@ After That, Run
     $ nano sudoers
   ```
 
-Then add users as you wish.
+Now this will throw an error.  
+
+ 
+  ```
+   [The file is unwritable!]
+  ```  
+
+So, We need to change permissions of sudoers file.  
+
+  ```
+    $ chmod +w sudoers
+  ```
+
+Then add users as you wish.  
+
+For security, You could change the permission of sudoers again.  
+
+
+  ```
+    $ chmod -w sudoers
+  ```  
 
   <br>
   <br>
