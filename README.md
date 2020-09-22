@@ -9,6 +9,7 @@ In this repository, I've created a Sudo Script That Provides Sudo Utilities For 
 
 ### What's new in version 2.2.4?  
 > Sudo is now available as compressed debian package (.deb file)  
+
 > Minor bug fixes
 
 __Support My Work By Starring This Repository on Github.__  
