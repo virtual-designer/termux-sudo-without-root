@@ -14,7 +14,7 @@ In this repository, I've created a Sudo Script That Provides Sudo Utilities For 
 
 __Support My Work By Starring This Repository on Github.__  
 
-**WARNING: Sudo will run on Non-rooted devices but It doesn't provide root permissions on your device!**  
+**WARNING: Sudo will run on non-rooted devices but it doesn't provide root permissions on your device!**  
 
 ### Installation  
   1. First, Download My Repository As ZIP or Clone it via your terminal. So, Run  
