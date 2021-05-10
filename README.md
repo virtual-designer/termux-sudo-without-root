@@ -108,10 +108,10 @@ For more details, Run
 ```  
 
 
-If you saw a bug, plese report me to my Email address.  
+If you found a bug, plese report me to my Email address.  
 
 
-> Email: help@http.packagehouse.ml
+> Email: rakinar2@gmail.com
 
 *Don't forget to follow my profile!*  
 
