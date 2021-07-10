@@ -1,6 +1,9 @@
 # Termux Sudo Without Root  
 In this repository, I've created a Sudo Script That Provides Sudo Utilities For Termux. It can run on both rooted & **Non-rooted** devices!  
 
+## What's new in version 2.3.7?
+> Fixed: `The user '' is not in sudoers group.` (bug reported by **Mohd Sufiyan <official8266@gmail.com>**)
+
 ### What's new in version 2.3.6?  
 > Sudo is now compatible with su binary with direct execution  
 
@@ -29,7 +32,6 @@ After That, Run
 
 
   ```  
-
     $ git clone http://github.com/virtual-designer/termux-sudo-without-root  
     $ cd termux-sudo-without-root/  
     $ apt install ./sudo.deb
@@ -105,7 +107,7 @@ For more details, Run
 
 ```
   $ sudo -h
-```  
+```
 
 
 If you found a bug, plese report me to my Email address.  
@@ -113,7 +115,7 @@ If you found a bug, plese report me to my Email address.
 
 > Email: rakinar2@gmail.com
 
-*Don't forget to follow my profile!*  
+*Don't forget to follow my profile!*
 
 Thanks For Taking a Look to This Repository.
 
