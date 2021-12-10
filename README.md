@@ -1,3 +1,6 @@
+**Note: This project has been discontinued and is no longer being maintained. New issues will no longer be reviewed.**
+
+
 # Termux Sudo Without Root  
 In this repository, I've created a Sudo Script That Provides Sudo Utilities For Termux. It can run on both rooted & **Non-rooted** devices!  
 
