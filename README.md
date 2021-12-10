@@ -1,4 +1,4 @@
-**Note: This project has been discontinued and is no longer being maintained. New issues will no longer be reviewed.**
+**Note: This project has been discontinued and no longer being maintained. New issues will no longer be reviewed.**
 
 
 # Termux Sudo Without Root  
